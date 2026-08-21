@@ -1,0 +1,62 @@
+======================================================================
+INSTRUÇÕES PARA A AVALIAÇÃO DE PROGRAMAÇÃO
+======================================================================
+
+Meus queridos! Leiam atentamente as instruções abaixo antes de iniciar a prova.
+
+1. MODALIDADE
+   - A avaliação pode ser realizada em DUPLA.
+   - Valor total do teste -> 7,5 pts.
+   - Valor de cada questão -> 1,25 pts.
+
+2. REGRAS DE CONSULTA
+   - É permitida a consulta SOMENTE AOS ARQUIVOS QUE JÁ ESTÃO NO VSCODE (exercícios anteriores e anotações de aula).
+   - Não é permitido acessar a internet para buscar soluções, nem utilizar IA ou colar códigos prontos.
+
+3. ONDE ESCREVER O CÓDIGO
+   - O código para resolver a questão deve ser escrito EXCLUSIVAMENTE dentro do bloco indicado por:
+
+     // REALIZE O EXERCÍCIO AQUI 🔽
+
+   - As variáveis já estão sendo convertidas para número (ex: Number(dadoUm)), portanto, não se preocupem com problemas de concatenação de strings.
+
+4. SAÍDA DE DADOS (PRINT)
+   - Para exibir os resultados e evitar erros de digitação e formatação, utilizem OBRIGATÓRIAMENTE A INTERPOLAÇÃO DE STRINGS** (Template Literals).
+   - Usem as crases (``) e o sinal de `${}` para as variáveis.
+   - Exemplo de uso correto:
+     console.log(`Resultado: ${variavelUm} + ${variavelDois} = ${resultado}`);
+
+======================================================================
+EXEMPLO DE ESTRUTURA ESPERADA (Cálculo de IMC):
+======================================================================
+
+const { createInterface } = require("readline");
+
+const rl = createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+rl.question("Digite o seu peso em kg: ", (peso) => {
+  rl.question("Digite a sua altura em metros: ", (altura) => {
+    peso = Number(peso);
+    altura = Number(altura);
+
+    // REALIZE O EXERCÍCIO AQUI
+    let imc = peso / (altura * altura);
+    
+    // Utilizando a interpolação exigida:
+    console.log(`Com o peso de ${peso}kg e altura de ${altura}m, seu IMC é: ${imc}`);
+
+    rl.close();
+  });
+});
+
+======================================================================
+⠀⠀⠀⠀⠀⠀⠀⠀⣠⣶⣶⣶⣦⠀⠀
+⠀⠀⣠⣤⣤⣄⣀⣾⣿⠟⠛⠻⢿⣷⠀
+⢰⣿⡿⠛⠙⠻⣿⣿⠁⠀⠀⠀⣶⢿⡇
+⢿⣿⣇⠀⠀⠀⠈⠏⠀⠀⠀ Boa prova a todos!
+⠀⠻⣿⣷⣦⣤⣀⠀⠀⠀⠀⣾⡿⠃⠀
+⠀⠀⠀⠀⠉⠉⠻⣿⣄⣴⣿⠟⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣿⡿⠟⠁⠀⠀⠀⠀
