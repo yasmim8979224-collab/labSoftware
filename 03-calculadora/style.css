@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: #f4f4f9;
+}
+
+.calculadora {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    width: 260px;
+}
+
+#visor {
+    width: 100%;
+    height: 50px;
+    font-size: 2em;
+    text-align: right;
+    margin-bottom: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    background-color: #eef;
+}
+
+/* O Grid divide o teclado em 4 colunas iguais */
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+/* Estilos botões */
+.btn-operador { background-color: #ff9800; color: white; }
+.btn-operador:hover { background-color: #e68a00; }
+
+.btn-acao { background-color: #f44336; color: white; }
+.btn-acao:hover { background-color: #d32f2f; }
+
+.btn-igual { background-color: #4CAF50; color: white; height: 100%; }
+.btn-igual:hover { background-color: #45a049; }
+
+/* Botão zero ocupar duas colunas */
+.btn-zero { grid-column: span 2; }
+
+/* Botão igual ocupar duas linhas de altura */
+.btn-igual { grid-row: span 2; }
